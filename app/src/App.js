@@ -9,7 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 const App = () => {
   return (
     <div>
-      <h2>BW BANK Helping Hand Giro</h2>
+      <h2 style = {{padding: "10px"}}>BW BANK Helping Hand Giro</h2>
       <AppBar position="static" color= "white">
         <Toolbar>
           <IconButton
