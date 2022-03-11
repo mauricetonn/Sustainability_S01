@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import NoPage from "./pages/NoPage";
 
+// Legt Pages für Routen fest (/browse -> Browse.js)
+// rendert App
+
 export default function App() {
   return (
     <BrowserRouter>

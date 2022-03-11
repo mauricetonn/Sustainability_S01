@@ -1,5 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 
+// Dient zur Erstellung der Navigationslinks ganz oben
+// Dient nur zum Testing
+// Sobald die Links im DropDown Menü sind, wird Layout entfernt
+
 const Layout = () => {
   return (
     <>
