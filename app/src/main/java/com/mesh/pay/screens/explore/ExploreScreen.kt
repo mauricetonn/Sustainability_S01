@@ -79,6 +79,7 @@ horizontalAlignment = Alignment.CenterHorizontally) {
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))
     val liste = SQLDatabaseConnection.abfrage()
+    print("test")
     fundCallList(liste)
 }
 
