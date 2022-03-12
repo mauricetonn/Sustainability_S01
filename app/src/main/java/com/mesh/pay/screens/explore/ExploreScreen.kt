@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.mesh.pay.backend.database.SQLDatabaseConnection
 import com.mesh.pay.backend.model.FundRequest
 import com.mesh.pay.screens.explore.fundCallList
 
@@ -77,7 +78,8 @@ horizontalAlignment = Alignment.CenterHorizontally) {
     Text("gute Tat für heute  ", fontWeight = FontWeight.Bold,)
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))
-    fundCallList(fundCallItems)
+    val liste = SQLDatabaseConnection.abfrage()
+    fundCallList(liste)
 }
 
 }
