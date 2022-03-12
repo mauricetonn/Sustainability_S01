@@ -28,6 +28,8 @@ fun ProfileScreen(navController: NavController) {
     ) {
         Spacer(modifier = Modifier.requiredHeight(10.dp))
         Text("Du bist momentan ")
+        Text("")
+        Text("Einsteiger ", fontWeight = FontWeight.W900,fontSize = 30.sp,)
         Spacer(modifier = Modifier.requiredHeight(30.dp))
         Image(
             painter = painterResource(id = R.drawable.tree_1),
@@ -36,8 +38,9 @@ fun ProfileScreen(navController: NavController) {
         )
         Spacer(modifier = Modifier.requiredHeight(5.dp))
         val text = score.value.toString()
-        Text(text = "$text Social Points",fontSize = 35.sp, color = Blue_medium)
-        Text("Einsteiger ", fontWeight = FontWeight.W900,fontSize = 30.sp,)
+
+        Text("")
+        Text(text = "$text Social Points", fontSize = 35.sp, color = Blue_medium)
         Spacer(modifier = Modifier.requiredHeight(30.dp))
         Button(onClick = { navController.navigate("explore") }){
             Text(text = "Werde zum GiroHero")

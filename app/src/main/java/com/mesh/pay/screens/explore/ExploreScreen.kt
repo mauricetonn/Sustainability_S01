@@ -25,7 +25,7 @@ fun ExploreScreen(navController: NavController) {
             "UA21 3223 1300 0002 6007 2335 6600 1",
             "DE02 1203 0000 0000 2020 51",
             "DE02200505501015871393",
-            90.00F,
+            89.99F,
             0,
             "Zugticket"
 
@@ -43,18 +43,6 @@ fun ExploreScreen(navController: NavController) {
 
         ),
         FundRequest(
-            "Semesterticket für das kommende Semester",
-            "10.03.22",
-            7899,
-            "UA21 3223 1300 0002 6007 2335 6600 1",
-            "DE02 1203 0000 0000 2020 51",
-            "DE02 2005 0550 1015 8713 93",
-            210.99F,
-            0,
-            "Zugticket"
-
-        ),
-        FundRequest(
         "Winterjacke",
         "11.03.22",
         7899,
@@ -65,25 +53,25 @@ fun ExploreScreen(navController: NavController) {
         0,
         "Zugticket"
 
-    ) ,
+        ),
 
-        FundRequest(
-        "Monatsmiete, da meine Firma in Kurzarbeit ist",
-        "10.03.22",
-        7899,
-        "UA21 3223 1300 0002 6007 2335 6600 1",
-        "DE02 1203 0000 0000 2020 51",
-        "DE02200505501015871393",
-        44.99F,
-        0,
-        "Zugticket"
+            FundRequest(
+            "Monatsmiete, da meine Firma in Kurzarbeit ist",
+            "10.03.22",
+            7899,
+            "UA21 3223 1300 0002 6007 2335 6600 1",
+            "DE02 1203 0000 0000 2020 51",
+            "DE02200505501015871393",
+            44.99F,
+            0,
+            "Zugticket"
 
-    )
+        )
     )
 Column(Modifier.fillMaxSize()
     .padding(10.dp),
 horizontalAlignment = Alignment.CenterHorizontally) {
-    Text("Finde heraus, wo du deine ")
+    Text("Finde heraus, wo Du Deine ")
     Text("gute Tat für heute  ", fontWeight = FontWeight.Bold,)
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))

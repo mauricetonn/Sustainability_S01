@@ -168,7 +168,7 @@ import java.sql.*
                         DropdownMenuItem(onClick = { /* Handle refresh! */ } , Modifier.background(
                             Color.LightGray)) {
                             Spacer(modifier = Modifier.requiredWidth(35.dp))
-                            Text("weitere Funkionen")
+                            Text("weitere Funktionen")
                             Spacer(modifier = Modifier.requiredWidth(30.dp))
                             Icon(Icons.Outlined.ArrowDropDown, "home")
                         }
@@ -190,17 +190,17 @@ import java.sql.*
                             BottomNavigationBar(
                                     items = listOf(
                                             BottomNavItem(
-                                                    "Banking",
+                                                    "Banking Übersicht",
                                                     "home",
                                                     id = R.drawable.cash_multiple
                                             ),
                                             BottomNavItem(
-                                                    "Give and Take",
+                                                    "Geben & Erhalten",
                                                     "explore",
                                                     id = R.drawable.hand_heart
                                             ),
                                             BottomNavItem(
-                                                    "Your Profie",
+                                                    "Dein Profil",
                                                     route = "profile",
                                                     id = R.drawable.tree
                                             )
