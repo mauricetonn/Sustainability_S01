@@ -1,22 +1,168 @@
 package com.mesh.pay.screens
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import java.lang.reflect.Modifier
+import com.mesh.pay.ui.theme.Green_medium
 
 @Composable
 fun TransferScreen(navController: NavController) {
-   Surface() {
+   Column(
+       Modifier.padding(20.dp)
+           .fillMaxWidth()) {
+       Text(text = "AUFTRAGGEBERKONTO",  fontWeight = FontWeight.Light)
+       Card(
+           modifier = Modifier
+               .padding(10.dp)
+               .fillMaxWidth()
+               .clip(RectangleShape)
+               .shadow(3.dp, RectangleShape),
+           elevation = 20.dp,
+           border = BorderStroke(2.dp, Color.LightGray)
+       ) {
+           Column(
+               modifier = Modifier
+                   .padding(10.dp)
+                   .fillMaxWidth(),
+               horizontalAlignment = Alignment.Start
+           ) {
+               Row(
+                   Modifier
+                       .padding(3.dp)
+                       .fillMaxWidth(),
+                   horizontalArrangement = Arrangement.Center
+               ) {
 
-
-    Column()
-    {
-
-    }
+                   Icon(Icons.Outlined.Refresh, contentDescription = "refresh", tint = Color.Gray, modifier = Modifier.size(10.dp))
+                   Text(
+                       color = Color.Gray,
+                       text = "vor 2 Stunden",
+                       fontSize = 10.sp,
+                       fontWeight = FontWeight.ExtraLight,
+                   )
+               }
+               Spacer(modifier = Modifier.requiredHeight(5.dp))
+               Row(Modifier.padding(2.dp)) {
+                   Text(
+                       color = Color.Gray,
+                       text = "HeroGiro",
+                   )
+               }
+               Row() {
+                   Text(
+                       color = Color.Gray,
+                       text = "DE02200505501015871393",
+                       fontSize = 12.sp,
+                       fontWeight = FontWeight.ExtraLight,
+                       fontFamily = FontFamily.SansSerif
+                   )
+                   Spacer(modifier = Modifier.requiredWidth(30.dp))
+                   Text(
+                       color = Green_medium,
+                       text = "4.007,89",
+                       fontSize = 15.sp,
+                       fontWeight = FontWeight.SemiBold,
+                       fontFamily = FontFamily.SansSerif
+                   )
+               }
+               Spacer(modifier = Modifier.requiredHeight(5.dp))
+               Row(Modifier.padding(2.dp)) {
+                   Text(
+                       color = Color.Gray,
+                       text = "Henry Hero",
+                   )
+               }
+           }
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Text(text = "BEGÜNSTIGTER",  fontWeight = FontWeight.Light)
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Box(modifier = Modifier.wrapContentSize())
+       {
+           var name by remember { mutableStateOf(TextFieldValue("")) }
+           TextField(
+               value = name,
+               onValueChange = {
+                   name = it
+               },
+               placeholder = { Text(text = "Name") },
+               singleLine = true
+           )
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Box(modifier = Modifier.wrapContentSize())
+       {
+           var nachname by remember { mutableStateOf(TextFieldValue("")) }
+           TextField(
+               value = nachname,
+               onValueChange = {
+                   nachname = it
+               },
+               placeholder = { Text(text = "Nachname") },
+               singleLine = true
+           )
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Box(modifier = Modifier.wrapContentSize())
+       {
+       var iban by remember { mutableStateOf(TextFieldValue("")) }
+       TextField(
+           value = iban,
+           onValueChange = {
+               iban = it
+           },
+           placeholder = { Text(text = "IBAN") },
+           singleLine = true
+       )
+   }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Box(modifier = Modifier.wrapContentSize())
+       {
+           var betrag  by remember { mutableStateOf(TextFieldValue("")) }
+           TextField(
+               value = betrag,
+               onValueChange = {
+                   betrag = it
+               },
+               placeholder = { Text(text = "Betrag") },
+               singleLine = true,
+               keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+           )
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Box(modifier = Modifier.wrapContentSize())
+       {
+           var verwendungszweck by remember { mutableStateOf(TextFieldValue("")) }
+           TextField(
+               value = verwendungszweck,
+               onValueChange = {
+                   verwendungszweck = it
+               },
+               placeholder = { Text(text = "Verwendungszweck") },
+               singleLine = true
+           )
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Button(onClick = {  }){
+           Text(text = "Senden")
+       }
    }
 }
