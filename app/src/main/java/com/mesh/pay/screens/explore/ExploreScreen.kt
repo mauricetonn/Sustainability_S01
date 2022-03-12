@@ -20,58 +20,58 @@ fun ExploreScreen(navController: NavController) {
     val fundCallItems = listOf<FundRequest>(
         FundRequest(
             "Zugticket von Kiew nach Warschau",
-            "21.03.22",
+            "6.03.22",
             7899,
             "UA21 3223 1300 0002 6007 2335 6600 1",
-            "DE02120300000000202051",
+            "DE02 1203 0000 0000 2020 51",
             "DE02200505501015871393",
-            90.0F,
+            89.99F,
             0,
             "Zugticket"
 
         ),
         FundRequest(
             "Semesterticket für das kommende Semester",
-            "21.03.22",
+            "7.03.22",
             7899,
             "UA21 3223 1300 0002 6007 2335 6600 1",
-            "DE02120300000000202051",
-            "DE02200505501015871393",
+            "DE02 1203 0000 0000 2020 51",
+            "DE 0220 0505 5010 1587 1393",
             210.99F,
             0,
             "Zugticket"
 
         ),
         FundRequest(
-        "Wintejacke",
-        "21.03.22",
+        "Winterjacke",
+        "11.03.22",
         7899,
         "UA21 3223 1300 0002 6007 2335 6600 1",
-        "DE02120300000000202051",
+        "DE02 1203 0000 0000 2020 51",
         "DE02200505501015871393",
         44.99F,
         0,
         "Zugticket"
 
-    ) ,
+        ),
 
-        FundRequest(
-        "Monatsmiete, da meine Firma in Kurzarbeit ist",
-        "21.03.22",
-        7899,
-        "UA21 3223 1300 0002 6007 2335 6600 1",
-        "DE02120300000000202051",
-        "DE02200505501015871393",
-        44.99F,
-        0,
-        "Zugticket"
+            FundRequest(
+            "Monatsmiete, da meine Firma in Kurzarbeit ist",
+            "10.03.22",
+            7899,
+            "UA21 3223 1300 0002 6007 2335 6600 1",
+            "DE02 1203 0000 0000 2020 51",
+            "DE02200505501015871393",
+            44.99F,
+            0,
+            "Zugticket"
 
-    )
+        )
     )
 Column(Modifier.fillMaxSize()
     .padding(10.dp),
 horizontalAlignment = Alignment.CenterHorizontally) {
-    Text("Finde heraus, wo du deine ")
+    Text("Finde heraus, wo Du Deine ")
     Text("gute Tat für heute  ", fontWeight = FontWeight.Bold,)
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))

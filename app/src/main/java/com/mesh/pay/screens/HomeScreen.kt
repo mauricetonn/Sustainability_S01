@@ -78,7 +78,7 @@ fun HomeScreen(navController: NavController) {
                     Spacer(modifier = Modifier.requiredWidth(40.dp))
                     Text(
                         color = Green_medium,
-                        text = "4.007,89",
+                        text = "4.007,89 €",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.SemiBold,
                         fontFamily = FontFamily.SansSerif

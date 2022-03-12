@@ -61,7 +61,7 @@ fun fundCard(item : FundRequest) {
                 fontFamily = FontFamily.SansSerif
             )
             Text(
-                text = "${item.rechnungsbetrag}€",
+                text = "${item.rechnungsbetrag} €",
                 //modifier = Modifier.fillMaxWidth(),
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,
