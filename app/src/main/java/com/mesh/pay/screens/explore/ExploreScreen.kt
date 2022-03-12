@@ -71,16 +71,25 @@ fun ExploreScreen(navController: NavController) {
 
         )
     )
-Column(Modifier.fillMaxSize()
-    .padding(10.dp),
+Column(
+    Modifier
+        .fillMaxSize()
+        .padding(10.dp),
 horizontalAlignment = Alignment.CenterHorizontally) {
     Text("Finde heraus, wo Du Deine ")
     Text("gute Tat für heute  ", fontWeight = FontWeight.Bold,)
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))
-    val liste = SQLDatabaseConnection.abfrage()
-    print("test")
-    fundCallList(liste)
+    //val liste = SQLDatabaseConnection.abfrage()
+    //print("test")
+    //val liste = listOf<FundRequest>()
+    //Text("vortest")
+
+    //val liste = SQLDatabaseConnection.abfrage()
+
+    fundCallList(fundCallItems)
+    //Text("nachtest")
+
 }
 
 }

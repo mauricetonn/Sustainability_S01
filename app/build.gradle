@@ -15,12 +15,14 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-        multiDexEnabled =  true
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
         }
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -57,7 +59,8 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'androidx.activity:activity-compose:1.3.1'
-    implementation 'com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre17'
+    //implementation 'com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre17'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:7.4.1.jre12'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -135,4 +138,5 @@ dependencies {
     //Accompanist
     implementation "com.google.accompanist:accompanist-pager:0.15.0"
     implementation "com.google.accompanist:accompanist-pager-indicators:0.15.0"
+
 }
