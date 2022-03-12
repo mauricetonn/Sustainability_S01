@@ -20,34 +20,46 @@ fun ExploreScreen(navController: NavController) {
     val fundCallItems = listOf<FundRequest>(
         FundRequest(
             "Zugticket von Kiew nach Warschau",
-            "21.03.22",
+            "6.03.22",
             7899,
             "UA21 3223 1300 0002 6007 2335 6600 1",
-            "DE02120300000000202051",
+            "DE02 1203 0000 0000 2020 51",
             "DE02200505501015871393",
-            90.0F,
+            90.00F,
             0,
             "Zugticket"
 
         ),
         FundRequest(
             "Semesterticket für das kommende Semester",
-            "21.03.22",
+            "7.03.22",
             7899,
             "UA21 3223 1300 0002 6007 2335 6600 1",
-            "DE02120300000000202051",
-            "DE02200505501015871393",
+            "DE02 1203 0000 0000 2020 51",
+            "DE 0220 0505 5010 1587 1393",
             210.99F,
             0,
             "Zugticket"
 
         ),
         FundRequest(
-        "Wintejacke",
-        "21.03.22",
+            "Semesterticket für das kommende Semester",
+            "10.03.22",
+            7899,
+            "UA21 3223 1300 0002 6007 2335 6600 1",
+            "DE02 1203 0000 0000 2020 51",
+            "DE02 2005 0550 1015 8713 93",
+            210.99F,
+            0,
+            "Zugticket"
+
+        ),
+        FundRequest(
+        "Winterjacke",
+        "11.03.22",
         7899,
         "UA21 3223 1300 0002 6007 2335 6600 1",
-        "DE02120300000000202051",
+        "DE02 1203 0000 0000 2020 51",
         "DE02200505501015871393",
         44.99F,
         0,
@@ -57,10 +69,10 @@ fun ExploreScreen(navController: NavController) {
 
         FundRequest(
         "Monatsmiete, da meine Firma in Kurzarbeit ist",
-        "21.03.22",
+        "10.03.22",
         7899,
         "UA21 3223 1300 0002 6007 2335 6600 1",
-        "DE02120300000000202051",
+        "DE02 1203 0000 0000 2020 51",
         "DE02200505501015871393",
         44.99F,
         0,
