@@ -49,7 +49,7 @@ fun fundCard(item : FundRequest) {
             horizontalAlignment = Alignment.Start
         ) {
             Text(
-                text = item.beschreibenderText,
+                text = item.beschreibendertext,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.SansSerif
@@ -62,14 +62,14 @@ fun fundCard(item : FundRequest) {
                 fontFamily = FontFamily.SansSerif
             )
             Text(
-                text = "${item.rechnungsBetrag}€",
+                text = "${item.rechnungsbetrag}€",
                 //modifier = Modifier.fillMaxWidth(),
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,
                 fontFamily = FontFamily.SansSerif
             )
             Text(
-                text = "Empfänger: ${item.empfaengerIBAN}",
+                text = "Empfänger: ${item.empfaengeriban}",
                 //modifier = Modifier.fillMaxWidth(),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Normal,

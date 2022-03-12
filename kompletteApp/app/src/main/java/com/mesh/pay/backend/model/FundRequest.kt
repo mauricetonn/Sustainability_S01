@@ -4,14 +4,14 @@ package com.mesh.pay.backend.model
  * TODO: MAke sealed
  */
 data class FundRequest(
-    val beschreibenderText : String,
+    val beschreibendertext : String,
     val datum: String,
-    val requestUUID : Int,
-    val anfordererIBAN: String,
-    val empfaengerIBAN: String,
-    val bezahlerIBAN: String,
-    val rechnungsBetrag: Float,
-    val bezahlt: Boolean,
+    val requestuuid : Int,
+    val anfordereriban: String,
+    val empfaengeriban: String,
+    val bezahleriban: String,
+    val rechnungsbetrag: Float,
+    val bezahlt: Int,
     val verwendungszweck: String,
 
     )
