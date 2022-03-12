@@ -39,6 +39,7 @@ import com.mesh.pay.screens.explore.ExploreScreen
 import com.mesh.pay.screens.HomeScreen
 import com.mesh.pay.screens.ProfileScreen
 import com.mesh.pay.screens.TransferScreen
+import com.mesh.pay.screens.TransferSucessScreen
 import com.mesh.pay.ui.theme.Blue_dark
 import com.mesh.pay.ui.theme.HelpingHandTheme
 import com.mesh.pay.ui.theme.components.topBar.DisplayTopAppBar
@@ -255,6 +256,9 @@ import java.sql.*
             }
             composable("transfer") {
                 TransferScreen(navController = navController)
+            }
+            composable("sucess") {
+                TransferSucessScreen(navController = navController)
             }
         }
     }

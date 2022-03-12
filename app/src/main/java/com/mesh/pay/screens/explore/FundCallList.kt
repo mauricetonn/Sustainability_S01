@@ -30,7 +30,6 @@ fun fundCallList( calls : List<FundRequest>)
         }
     }
 }
-
 @Composable
 fun fundCard(item : FundRequest) {
     Card(

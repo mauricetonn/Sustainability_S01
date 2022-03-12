@@ -131,7 +131,7 @@ fun HomeScreen(navController: NavController) {
 
                         .padding(3.dp)
                         .fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Start
+                    horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     IconButton(onClick = { navController.navigate("transfer") }, Modifier.requiredWidth(100.dp)) {
                         Column(Modifier.requiredWidth(100.dp)  ,
