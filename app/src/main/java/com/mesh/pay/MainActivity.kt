@@ -1,6 +1,7 @@
-package com.mesh.pay
+ package com.mesh.pay
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ import androidx.compose.material.icons.outlined.ArrowDropDown
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -33,14 +35,18 @@ import androidx.navigation.navArgument
 import com.mesh.pay.navigation.BottomNavItem
 import com.mesh.pay.navigation.BottomNavigationBar
 import com.mesh.pay.navigation.screen
-import com.mesh.pay.screens.ExploreScreen
+import com.mesh.pay.screens.explore.ExploreScreen
 import com.mesh.pay.screens.HomeScreen
 import com.mesh.pay.screens.ProfileScreen
+import com.mesh.pay.screens.TransferScreen
 import com.mesh.pay.ui.theme.Blue_dark
 import com.mesh.pay.ui.theme.HelpingHandTheme
 import com.mesh.pay.ui.theme.components.topBar.DisplayTopAppBar
+import com.mesh.pay.ui.theme.components.topBar.menuClicked
+import kotlinx.coroutines.launch
+import java.sql.*
 
-class MainActivity : ComponentActivity() {
+ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (allPermissionsGranted()) {
@@ -88,10 +94,19 @@ class MainActivity : ComponentActivity() {
             HelpingHandTheme(darkTheme = false) {
                 //Screen Orientation
                 val navController = rememberNavController()
-                val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Closed))
+                val drawerState = rememberDrawerState(DrawerValue.Closed)
+                val scaffoldState = rememberScaffoldState(drawerState)
+                val scope = rememberCoroutineScope()
+
 
                 Scaffold(
                     drawerContent = {
+                        if (menuClicked.value){
+                            scope.launch {
+                                drawerState.open()
+                            }
+                            menuClicked.value = false
+                        }
                         Row(
                             Modifier
                                 .requiredHeight(56.dp)
@@ -169,7 +184,6 @@ class MainActivity : ComponentActivity() {
                             Spacer(modifier = Modifier.requiredWidth(15.dp))
                             Text("Abmelden")
                         }
-
                                     },
                     scaffoldState = scaffoldState,
                     bottomBar = {
@@ -212,7 +226,7 @@ class MainActivity : ComponentActivity() {
                     Surface(
                             modifier = padding
                     ) {
-                        Navigation(navController = navController)
+                       Navigation(navController = navController)
                     }
                 }
 
@@ -226,7 +240,6 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Navigation(navController: NavHostController) {
         NavHost(navController = navController, startDestination = "home") {
-
             composable("home") {
                 HomeScreen(navController = navController)
             }
@@ -239,6 +252,9 @@ class MainActivity : ComponentActivity() {
             }
             composable("profile") {
                 ProfileScreen(navController)
+            }
+            composable("transfer") {
+                TransferScreen(navController = navController)
             }
         }
     }

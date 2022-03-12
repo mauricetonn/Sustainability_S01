@@ -40,10 +40,10 @@ fun ProfileScreen(navController: NavController) {
         Text("Einsteiger ", fontWeight = FontWeight.W900,fontSize = 30.sp,)
         Spacer(modifier = Modifier.requiredHeight(30.dp))
         Button(onClick = { navController.navigate("explore") }){
-            Text(text = "Check out the open FundRequests")
+            Text(text = "Werde zum GiroHero")
         }
-        Spacer(modifier = Modifier.requiredHeight(5.dp))
-        Text("to level up your score")
+        Spacer(modifier = Modifier.requiredHeight(10.dp))
+        Text("und erkunde die aktuellen Hilferufe!")
 
     }
 

@@ -1,4 +1,4 @@
-package com.mesh.pay.screens
+package com.mesh.pay.screens.explore
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
@@ -26,7 +26,7 @@ fun ExploreScreen(navController: NavController) {
             "DE02120300000000202051",
             "DE02200505501015871393",
             90.0F,
-            false,
+            0,
             "Zugticket"
 
         ),
@@ -38,7 +38,7 @@ fun ExploreScreen(navController: NavController) {
             "DE02120300000000202051",
             "DE02200505501015871393",
             210.99F,
-            false,
+            0,
             "Zugticket"
 
         ),
@@ -50,7 +50,7 @@ fun ExploreScreen(navController: NavController) {
         "DE02120300000000202051",
         "DE02200505501015871393",
         44.99F,
-        false,
+        0,
         "Zugticket"
 
     ) ,
@@ -63,7 +63,7 @@ fun ExploreScreen(navController: NavController) {
         "DE02120300000000202051",
         "DE02200505501015871393",
         44.99F,
-        false,
+        0,
         "Zugticket"
 
     )
