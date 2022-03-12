@@ -42,7 +42,8 @@ fun ProfileScreen(navController: NavController) {
         Text("")
         Text(text = "$text Social Points", fontSize = 35.sp, color = Blue_medium)
         Spacer(modifier = Modifier.requiredHeight(30.dp))
-        Button(onClick = { navController.navigate("explore") }){
+        Button(onClick = {
+            navController.navigate("explore") }){
             Text(text = "Werde zum GiroHero")
         }
         Spacer(modifier = Modifier.requiredHeight(10.dp))

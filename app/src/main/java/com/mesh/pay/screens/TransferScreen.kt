@@ -3,6 +3,7 @@ package com.mesh.pay.screens
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -23,6 +24,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.mesh.pay.ui.theme.Green_medium
 
+val socialCheckState = mutableStateOf(false)
+val co2CheckState =  mutableStateOf(false)
+
 @Composable
 fun TransferScreen(navController: NavController) {
    Column(
@@ -31,7 +35,7 @@ fun TransferScreen(navController: NavController) {
        Text(text = "AUFTRAGGEBERKONTO",  fontWeight = FontWeight.Light)
        Card(
            modifier = Modifier
-               .padding(10.dp)
+               .padding(5.dp)
                .fillMaxWidth()
                .clip(RectangleShape)
                .shadow(3.dp, RectangleShape),
@@ -40,7 +44,6 @@ fun TransferScreen(navController: NavController) {
        ) {
            Column(
                modifier = Modifier
-                   .padding(10.dp)
                    .fillMaxWidth(),
                horizontalAlignment = Alignment.Start
            ) {
@@ -59,7 +62,6 @@ fun TransferScreen(navController: NavController) {
                        fontWeight = FontWeight.ExtraLight,
                    )
                }
-               Spacer(modifier = Modifier.requiredHeight(5.dp))
                Row(Modifier.padding(2.dp)) {
                    Text(
                        color = Color.Gray,
@@ -97,40 +99,43 @@ fun TransferScreen(navController: NavController) {
        Spacer(modifier = Modifier.requiredHeight(5.dp))
        Box(modifier = Modifier.wrapContentSize())
        {
-           var name by remember { mutableStateOf(TextFieldValue("")) }
+           var name by remember { mutableStateOf(TextFieldValue("Tina")) }
            TextField(
                value = name,
                onValueChange = {
                    name = it
                },
                placeholder = { Text(text = "Name") },
-               singleLine = true
+               singleLine = true,
+
            )
        }
        Spacer(modifier = Modifier.requiredHeight(5.dp))
        Box(modifier = Modifier.wrapContentSize())
        {
-           var nachname by remember { mutableStateOf(TextFieldValue("")) }
+           var nachname by remember { mutableStateOf(TextFieldValue("Höflich")) }
            TextField(
                value = nachname,
                onValueChange = {
                    nachname = it
                },
                placeholder = { Text(text = "Nachname") },
-               singleLine = true
+               singleLine = true,
+
            )
        }
        Spacer(modifier = Modifier.requiredHeight(5.dp))
        Box(modifier = Modifier.wrapContentSize())
        {
-       var iban by remember { mutableStateOf(TextFieldValue("")) }
+       var iban by remember { mutableStateOf(TextFieldValue("DE02500105170137075030")) }
        TextField(
            value = iban,
            onValueChange = {
                iban = it
            },
            placeholder = { Text(text = "IBAN") },
-           singleLine = true
+           singleLine = true,
+
        )
    }
        Spacer(modifier = Modifier.requiredHeight(5.dp))
@@ -144,7 +149,8 @@ fun TransferScreen(navController: NavController) {
                },
                placeholder = { Text(text = "Betrag") },
                singleLine = true,
-               keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+               keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+
            )
        }
        Spacer(modifier = Modifier.requiredHeight(5.dp))
@@ -157,12 +163,42 @@ fun TransferScreen(navController: NavController) {
                    verwendungszweck = it
                },
                placeholder = { Text(text = "Verwendungszweck") },
-               singleLine = true
+               singleLine = true,
            )
        }
        Spacer(modifier = Modifier.requiredHeight(5.dp))
-       Button(onClick = {  }){
-           Text(text = "Senden")
+       Row(
+           Modifier.fillMaxWidth()
+       ) {
+           Checkbox(
+               checked = co2CheckState.value,
+               onCheckedChange = { co2CheckState.value = it }
+           )
+           Spacer(modifier = Modifier.requiredWidth(5.dp))
+
+           Text ("Ja, ich kompensiere den CO2 Außstoß der Bankserver mit 0.30€", fontWeight = FontWeight.Light)
+       }
+       Spacer(modifier = Modifier.requiredHeight(5.dp))
+       Row(
+           Modifier.fillMaxWidth()
+       ) {
+           Checkbox(
+               checked = socialCheckState.value,
+               onCheckedChange = { socialCheckState.value = it }
+           )
+           Spacer(modifier = Modifier.requiredWidth(5.dp))
+
+           Text ("Ja, ich spende 2€ für ein Zugticket von Kiew nach Berlin", fontWeight = FontWeight.Light)
+       }
+       Button(onClick = {
+           if (socialCheckState.value ) {
+               score.value +=10
+           }
+           if(co2CheckState.value)
+               score.value +=10
+
+           navController.navigate("sucess") }){
+           Text(text = " Senden ")
        }
    }
 }
