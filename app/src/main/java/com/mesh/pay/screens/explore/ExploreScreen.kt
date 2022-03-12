@@ -17,6 +17,8 @@ import com.mesh.pay.screens.explore.fundCallList
 @Composable
 fun ExploreScreen(navController: NavController) {
     //fetchList
+
+
     val fundCallItems = listOf<FundRequest>(
         FundRequest(
             "Zugticket von Kiew nach Warschau",

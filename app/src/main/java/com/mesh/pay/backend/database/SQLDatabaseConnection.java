@@ -13,7 +13,7 @@ import java.util.List;
 public class SQLDatabaseConnection {
     // Connect to your database.
     // Replace server name, username, and password with your credentials
-    public static List<FundRequest>abfrage(String[] args) {
+    public static List<FundRequest>abfrage() {
         String connectionUrl =
                 "jdbc:sqlserver://sustainableserver.database.windows.net:1433;"
                         + "database=database;"
