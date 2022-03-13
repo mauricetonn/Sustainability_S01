@@ -79,7 +79,7 @@ fun TransferScreen(navController: NavController) {
                    Spacer(modifier = Modifier.requiredWidth(35.dp))
                    Text(
                        color = Green_medium,
-                       text = "4.007,89",
+                       text = "4.007,89 €",
                        fontSize = 15.sp,
                        fontWeight = FontWeight.SemiBold,
                        fontFamily = FontFamily.SansSerif
