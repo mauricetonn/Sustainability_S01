@@ -33,7 +33,6 @@ public class SQLDatabaseConnection {
                         "jdbc:sqlserver://sustainableserver.database.windows.net:1433;"
                                 + "database=database;"
                                 + "user=adminsus@sustainableserver;"
-                                + "password=38976#abB;"
                                 + "encrypt=true;"
                                 + "trustServerCertificate=false;"
                                 + "hostNameInCertificate=*.database.windows.net;"
