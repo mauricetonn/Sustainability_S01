@@ -6,8 +6,8 @@ Was wäre, wenn Spenden so einfach wäre wie online bezahlen? GiroHero bietet ei
 
 # Projektteilnehmer:
 
-Tina Höflich
-Lena Gerken
-Maurice Tonn
-Adam Alioua
+Tina Höflich,
+Lena Gerken,
+Maurice Tonn,
+Adam Alioua,
 Frederic Findeis
