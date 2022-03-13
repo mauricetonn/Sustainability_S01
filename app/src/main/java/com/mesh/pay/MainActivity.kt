@@ -155,7 +155,7 @@ import java.sql.*
                             Text("Finanzstatus")
                         }
                         Divider()
-                        DropdownMenuItem(onClick = { /* Handle refresh! */ }) {
+                        DropdownMenuItem(onClick = { navController.navigate("home")}) {
                             Icon(painterResource(id = R.drawable.cash_multiple), "home")
                             Spacer(modifier = Modifier.requiredWidth(15.dp))
                             Text("Banking")
@@ -191,7 +191,7 @@ import java.sql.*
                             BottomNavigationBar(
                                     items = listOf(
                                             BottomNavItem(
-                                                    "Banking Übersicht",
+                                                    "Banking",
                                                     "home",
                                                     id = R.drawable.cash_multiple
                                             ),

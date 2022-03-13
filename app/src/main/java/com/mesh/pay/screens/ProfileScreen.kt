@@ -19,7 +19,7 @@ import com.mesh.pay.ui.theme.Blue_medium
 /**
  * T
  */
-val score = mutableStateOf(0.0)
+val score = mutableStateOf(0)
 @Composable
 fun ProfileScreen(navController: NavController) {
     Column(

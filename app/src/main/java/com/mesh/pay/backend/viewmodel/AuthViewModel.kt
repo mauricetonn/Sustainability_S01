@@ -25,7 +25,6 @@ class AuthViewModel @Inject constructor(
             isLoading.value = true
             _getAuthToken.value = result.data!!
         }
-
         return result
     }
 }
