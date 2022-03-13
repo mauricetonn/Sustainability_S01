@@ -188,7 +188,8 @@ fun TransferScreen(navController: NavController) {
            )
            Spacer(modifier = Modifier.requiredWidth(5.dp))
 
-           Text ("Ja, ich spende 2€ für ein Zugticket von Kiew nach Berlin", fontWeight = FontWeight.Light)
+           Text ("Ja, ich möchte 2€ für lebenswichtige Medikamente spenden", fontWeight = FontWeight.Light)
+           Spacer(modifier = Modifier.requiredHeight(2.dp))
        }
        Button(onClick = {
            if (socialCheckState.value ) {
