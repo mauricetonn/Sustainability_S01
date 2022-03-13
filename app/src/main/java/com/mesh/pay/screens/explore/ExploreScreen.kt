@@ -46,7 +46,7 @@ fun ExploreScreen(navController: NavController) {
 
         ),
         FundRequest(
-        "Winterjacke",
+        "Warme Winterjacke ",
         "11.03.22",
         7899,
         "UA21 3223 1300 0002 6007 2335 6600 1",
@@ -79,7 +79,6 @@ horizontalAlignment = Alignment.CenterHorizontally) {
     Text("vollbringen kannst ")
     Spacer(modifier = Modifier.requiredHeight(2.dp))
     val liste = SQLDatabaseConnection.abfrage()
-    fundCallList(liste)
+    fundCallList(fundCallItems)
 }
-
 }

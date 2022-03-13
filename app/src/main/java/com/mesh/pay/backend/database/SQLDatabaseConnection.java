@@ -1,5 +1,7 @@
 package com.mesh.pay.backend.database;
 
+import android.widget.Toast;
+
 import com.mesh.pay.backend.model.FundRequest;
 
 import java.sql.Connection;
@@ -48,6 +50,7 @@ public class SQLDatabaseConnection {
         }
         catch (SQLException e) {
             e.printStackTrace();
+            System.out.println(e.getLocalizedMessage());
         }
         return ListeFundRequest;
     }

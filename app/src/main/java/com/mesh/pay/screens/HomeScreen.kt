@@ -75,11 +75,11 @@ fun HomeScreen(navController: NavController) {
                         fontWeight = FontWeight.Light,
                         fontFamily = FontFamily.SansSerif
                     )
-                    Spacer(modifier = Modifier.requiredWidth(40.dp))
+                    Spacer(modifier = Modifier.requiredWidth(30.dp))
                     Text(
                         color = Green_medium,
                         text = "4.007,89 €",
-                        fontSize = 20.sp,
+                        fontSize = 19.sp,
                         fontWeight = FontWeight.SemiBold,
                         fontFamily = FontFamily.SansSerif
                     )

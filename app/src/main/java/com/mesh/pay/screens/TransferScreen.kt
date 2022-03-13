@@ -76,7 +76,7 @@ fun TransferScreen(navController: NavController) {
                        fontWeight = FontWeight.ExtraLight,
                        fontFamily = FontFamily.SansSerif
                    )
-                   Spacer(modifier = Modifier.requiredWidth(30.dp))
+                   Spacer(modifier = Modifier.requiredWidth(35.dp))
                    Text(
                        color = Green_medium,
                        text = "4.007,89",

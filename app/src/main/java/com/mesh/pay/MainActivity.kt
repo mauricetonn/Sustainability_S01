@@ -191,7 +191,7 @@ import java.sql.*
                             BottomNavigationBar(
                                     items = listOf(
                                             BottomNavItem(
-                                                    "Banking Übersicht",
+                                                    "Banking",
                                                     "home",
                                                     id = R.drawable.cash_multiple
                                             ),
