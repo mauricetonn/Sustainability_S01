@@ -75,6 +75,7 @@ fun TransferSucessScreen(navController: NavController) {
         Spacer(modifier = Modifier.requiredHeight(5.dp))
         val text = score.value.toString()
         Text(text = "$text Social Points", fontSize = 20.sp, color = Blue_medium)
+        Spacer(modifier = Modifier.requiredHeight(10.dp))
         Text("Weltverbesserer", fontWeight = FontWeight.Light, fontSize = 35.sp,)
         Spacer(modifier = Modifier.requiredHeight(21.dp))
         Row(Modifier.fillMaxWidth(),
@@ -92,15 +93,18 @@ fun TransferSucessScreen(navController: NavController) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth(0.6F)
-                    .background(color = Color.Green),
+                    .padding(10.dp)
+                    .background(color = Green_medium),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     "Noch $points_left Social Points zum",
-                    fontWeight = FontWeight.Normal,
-                    fontSize = 20.sp,textAlign = TextAlign.Center
+                    fontWeight = FontWeight.Light,
+                    fontSize = 20.sp,textAlign = TextAlign.Center,
+                    color = Color.White
                 )
-                Text("Giro Hero", fontWeight = FontWeight.Bold, fontSize = 30.sp,)
+                Text("Giro Hero", fontWeight = FontWeight.Bold, fontSize = 30.sp,color = Color.White)
+                Spacer(modifier = Modifier.requiredHeight(3.dp))
             }
         }
             Column(
